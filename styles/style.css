@@ -58,6 +58,7 @@ body.active{
 .header__nav ul{
     display: flex;
     margin-left: 96px;
+    margin-bottom: 0;
 }
 
 .header__nav ul li{
@@ -84,22 +85,28 @@ body.active{
     line-height: 19.6px;
 }
 
-.header__dropdown{
+.header__nav ul .menu-item-has-children{
     position: relative;
 }
 
-.header__dropdown button::after{
+.header__nav ul .menu-item-has-children a::after{
     content: url('../img/arrow.svg');
     margin-left: 9.5px;
 }
 
-.header__dropCont{
+.header__nav ul .menu-item-has-children ul a::after{
     display: none;
-    position: absolute;
 }
 
-.header__dropdown:hover .header__dropCont{
-    display: flex;
+.sub-menu{
+    display: none !important;
+    position: absolute;
+    margin-left: 0 !important;
+    width: max-content;
+}
+
+.header__nav ul .menu-item-has-children:hover .sub-menu{
+    display: flex !important;
     flex-direction: column;
 }
 
